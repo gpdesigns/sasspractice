@@ -1,0 +1,46 @@
+/*
+ Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/css3/images"
+@import "compass/css3"
+
+$mainColor: #333
+$wrapperSize: 500px
+$generalFontSize: 12px
+$generalPadding: 10px
+
+
+=border-radius($radius)
+   -webkit-border-radius: $radius
+   -moz-border-radius:    $radius
+   -ms-border-radius:     $radius
+   border-radius:         $radius
+
+.box
+   +border-radius(10px)
+   background: white
+   +box-shadow(#ccc 0px 0px 10px)   
+   width: 400px
+   padding: $generalPadding
+
+=main-font-structure
+   font-family: Georgia, Serif
+   font-weight: bold
+   color: black
+   font-size: $generalFontSize
+   
+#page-wrap
+   width: $wrapperSize
+   margin: 0 auto
+   ul
+      color: $mainColor
+      li
+         text-decoration: none
+         +main-font-structure
+body 
+   +main-font-structure
+   +background-image(linear-gradient(to bottom, white, #ddd))
+   height: 800px
